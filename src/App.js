@@ -7,6 +7,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Home from "../src/components/home/HomePage.js"
 
 
 function App() {
@@ -15,6 +16,11 @@ function App() {
       <Router>
         <ChakraProvider theme={theme}>
           <Navbar ></Navbar>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </Switch>
         </ChakraProvider>
       </Router>
     </div>

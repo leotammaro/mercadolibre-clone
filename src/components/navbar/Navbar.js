@@ -5,7 +5,7 @@ import NavbarMedia from "./NavbarMedia";
 
 function Navbar() {
     return (
-        <Stack bg="brand.navbar" h={{base:"87px",xl:"100px"}} w="100%" justifyContent="center">
+        <Stack bg="brand.navbar" h={{base:"87px",xl:"100px"}} >
            <NavbarMedia/>
            <NavbarFullScreen/>
         </Stack>

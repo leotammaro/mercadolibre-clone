@@ -7,12 +7,15 @@ import Shop from "../../assets/shop.svg";
 import Map from "../../assets/map.svg";
 import Search from "../../assets/search.svg";
 import SwipeRigth from "../../assets/chevron.svg";
+import {Link} from "react-router-dom"
 
 function NavbarMedia() {
     return (
-        <Stack display={{base:"block",xl:"none"}}  divider={<StackDivider borderColor="#736c28" opacity="0.3"></StackDivider>}>
+        <Stack display={{base:"block",xl:"none"}}  divider={<StackDivider borderColor="#736c28" opacity="0.3"></StackDivider>} >
             <Stack direction="row"  justifyContent="space-around" alignItems="center" spacing={0}>
-               <Image h="90%" w="45px" src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.14.5/mercadolibre/logo__small.png" />
+                <Link to="/">
+                    <Image h="90%" w="45px" src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.14.5/mercadolibre/logo__small.png" />
+                </Link>
                <Stack direction="row" flex={{base:"0.9"}} bg="white" spacing={0}>
                    <Image h="18px" src={Search}  position="relative"  top="6px" margin="0px 6px"></Image>
                    <Input h="30px" w="100%" padding={0}  border="none" borderRadius="0" placeholder="Buscar productos, marcas y mas" textAlign="start"></Input>
