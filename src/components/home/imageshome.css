@@ -2,3 +2,13 @@
     margin: 10px;
     cursor: pointer;
 }
+.thumbs.animated{
+    display: none;
+}
+.carousel-status{
+    display: none;
+}
+.carousel{
+    width: 95%;
+    margin: 0 auto;
+}

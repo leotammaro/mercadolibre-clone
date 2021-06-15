@@ -14,7 +14,7 @@ import {Link} from "react-router-dom"
 
 function NavbarFullScreen() {
     return (
-        <Stack direction="row" display={{base:"none",xl:"flex"}} h="100px"   justifyContent="center" w="80%">
+        <Stack direction="row" display={{base:"none",xl:"flex"}} h="100px"   justifyContent="center" w="90%">
             <Stack  minW="250px" alignItems="center" padding="0px 30px 0px 30px">
                 <Link to="/">
                  <Image h="30px" w="130px" src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.14.5/mercadolibre/logo__large_plus@2x.png" />
@@ -27,12 +27,12 @@ function NavbarFullScreen() {
                     </Stack>
                 </Stack>
             </Stack>  
-            <Stack direction="column"  alignItems="flex-start" w="100%" maxW="600px">
-                <Stack position="relative" bg="white" direction="row" alignItems="center" justifyContent="flex-start" >
+            <Stack direction="column"  alignItems="flex-start" w="100%" maxW="600px" minW="400px">
+                <Stack position="relative" bg="white" direction="row" alignItems="center" justifyContent="flex-start" w="100%" >
                     <Input  border="none" placeholder="Buscar productos, marcas y más..." boxShadow="0 1px 2px 0 rgb(0,0,0,0.2)" borderRadius="0" ></Input>
                     <Image maxW="20px" src={Search} position="absolute" right="1"></Image>
                 </Stack>
-                <Stack direction="row"  spacing={3} justifyContent="flex-start" maxW="500px">
+                <Stack direction="row"  spacing={3} justifyContent="flex-start" maxW="500px"  w="100%">
                     <Stack direction="row"  alignItems="center" position="relative" justifyContent="flex-start" >
                         <Button  fontWeight="200" fontSize="13px" bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} paddingLeft={0}>Categorias</Button>
                         <Image src={DownSearch} opacity="0.6" h="20px" position="absolute" right={-1} top={3}/>
@@ -41,11 +41,11 @@ function NavbarFullScreen() {
                     <Button fontSize="13px" fontWeight="200"  bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} padding={0}>Historial</Button>
                     <Button  fontSize="13px" fontWeight="200" bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} padding={0}>Supermercado</Button>
                     <Button fontSize="13px" fontWeight="200"  bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} padding={0}>Historial</Button>
-                    <Button fontSize="13px" fontWeight="200" bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} padding={0}>Moda</Button>
+                    <Button display={{xl:"none",xxl:"block"}} fontSize="13px" fontWeight="200" bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} padding={0}>Moda</Button>
                     <Button fontSize="13px" fontWeight="200" bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} padding={0}>Vender</Button>
                 </Stack>
             </Stack>
-            <Stack direction="column" justifyContent="space-around" alignItems="flex-end" minW="340px">
+            <Stack direction="column" justifyContent="space-around" alignItems="flex-end" minW="350px">
                 <Text fontWeight="600">Hasta 4 meses de regalo en Disney+</Text>
                 <Stack direction="row" fontSize="13px" spacing={3}>
                     <Stack direction="row" spacing={1}>

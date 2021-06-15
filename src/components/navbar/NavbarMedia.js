@@ -11,7 +11,7 @@ import {Link} from "react-router-dom"
 
 function NavbarMedia() {
     return (
-        <Stack display={{base:"block",xl:"none"}}  divider={<StackDivider borderColor="#736c28" opacity="0.3"></StackDivider>} >
+        <Stack display={{base:"block",xl:"none"}} w="100%"  divider={<StackDivider borderColor="#736c28" opacity="0.3" ></StackDivider>} >
             <Stack direction="row"  justifyContent="space-around" alignItems="center" spacing={0}>
                 <Link to="/">
                     <Image h="90%" w="45px" src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.14.5/mercadolibre/logo__small.png" />

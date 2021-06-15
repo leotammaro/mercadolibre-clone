@@ -6,7 +6,7 @@ const breakpoints = createBreakpoints({
     md: "48em",
     lg: "62em",
     xl: "1020px",
-    "2xl": "96em",
+    xxl:"1150px"
   })
   
 export default extendTheme({
