@@ -11,6 +11,7 @@ import Notification from "../../assets/notification.svg"
 import Shop from "../../assets/shop.svg"
 import "./styleCssFullScreen.css"
 import {Link} from "react-router-dom"
+import ButtonNavbar from '../buttons/ButtonNavbar'
 
 function NavbarFullScreen() {
     return (
@@ -29,33 +30,33 @@ function NavbarFullScreen() {
             </Stack>  
             <Stack direction="column"  alignItems="flex-start" w="100%" maxW="600px" minW="400px">
                 <Stack position="relative" bg="white" direction="row" alignItems="center" justifyContent="flex-start" w="100%" >
-                    <Input  border="none" placeholder="Buscar productos, marcas y más..." boxShadow="0 1px 2px 0 rgb(0,0,0,0.2)" borderRadius="0" ></Input>
+                    <Input _focus={{bg:"none"}}  border="none" placeholder="Buscar productos, marcas y más..." boxShadow="0 1px 2px 0 rgb(0,0,0,0.2)" borderRadius="0"></Input>
                     <Image maxW="20px" src={Search} position="absolute" right="1"></Image>
                 </Stack>
                 <Stack direction="row"  spacing={3} justifyContent="flex-start" maxW="500px"  w="100%">
-                    <Stack direction="row"  alignItems="center" position="relative" justifyContent="flex-start" >
-                        <Button  fontWeight="200" fontSize="13px" bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} paddingLeft={0}>Categorias</Button>
-                        <Image src={DownSearch} opacity="0.6" h="20px" position="absolute" right={-1} top={3}/>
+                    <Stack direction="row"  alignItems="center" justifyContent="flex-start" >
+                        <ButtonNavbar color="grey">
+                            <Text>Categorias</Text>
+                            <Image src={DownSearch} opacity="0.4" h="20px"/>
+                        </ButtonNavbar>  
                     </Stack>
-                    <Button  fontSize="13px" fontWeight="200"  bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} padding={0}>Ofertas</Button>
-                    <Button fontSize="13px" fontWeight="200"  bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} padding={0}>Historial</Button>
-                    <Button  fontSize="13px" fontWeight="200" bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} padding={0}>Supermercado</Button>
-                    <Button fontSize="13px" fontWeight="200"  bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} padding={0}>Historial</Button>
-                    <Button display={{xl:"none",xxl:"block"}} fontSize="13px" fontWeight="200" bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} padding={0}>Moda</Button>
-                    <Button fontSize="13px" fontWeight="200" bg="none" _hover={{bg:"none"}} _active={{bg:"none"}} _focus={{borderColor:"none"}} padding={0}>Vender</Button>
+                    <ButtonNavbar>Ofertas</ButtonNavbar>
+                    <ButtonNavbar>Historial</ButtonNavbar>
+                    <ButtonNavbar>Supermercado</ButtonNavbar>
+                    <ButtonNavbar>Historial</ButtonNavbar>
+                    <ButtonNavbar>Moda</ButtonNavbar>
+                    <ButtonNavbar>Vender</ButtonNavbar>
                 </Stack>
             </Stack>
-            <Stack direction="column" justifyContent="space-around" alignItems="flex-end" minW="350px">
+            <Stack direction="column" justifyContent="space-around" alignItems="flex-end" minW="350px" >
                 <Text fontWeight="600">Hasta 4 meses de regalo en Disney+</Text>
-                <Stack direction="row" fontSize="13px" spacing={3}>
-                    <Stack direction="row" spacing={1}>
-                        <Image src={User} h="20px"/>
-                        <Text >Leonel</Text>
-                        <Image src={DownSearch} h="20px"/>
-                    </Stack>
-                    <Text>Mis compras</Text>
-                    <Stack direction="row" spacing={1}>
-                        <Text>Favoritos</Text>
+                <Stack direction="row" fontSize="13px" spacing={3} alignItems="center">
+                    <Link to="/register">
+                        <ButtonNavbar color="#000">Crear cuenta</ButtonNavbar>
+                    </Link>
+                     <ButtonNavbar color="#000">Mis compras</ButtonNavbar>
+                    <Stack direction="row" spacing={1} alignItems="center">
+                        <ButtonNavbar color="#000">Favoritos</ButtonNavbar>    
                         <Image src={DownSearch} h="20px"/>
                     </Stack>
                     <Image src={Notification} h="20px"></Image>
