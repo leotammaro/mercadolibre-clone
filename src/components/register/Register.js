@@ -10,8 +10,7 @@ function Register() {
             <Stack >
                 <Text fontSize="24px" fontWeight="600">Completá tus datos</Text>
             </Stack>
-            <FormSectionRegister />
-            <Button w="140px" fontSize="20px" h="50px" bg="blackAlpha.200" color="gray.400">Continuar</Button>    
+            <FormSectionRegister /> 
            </Stack>
         </Stack>
     )
